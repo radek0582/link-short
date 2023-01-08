@@ -1,5 +1,6 @@
-package com.example.demo;
+package com.example.demo.controller;
 
+import com.example.demo.LinkDto;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -11,6 +12,7 @@ import java.io.IOException;
 @RestController
 @RequestMapping("/s/")
 class RedirectController {
+    LinkDto linkDto;
 
     @GetMapping("{id}")
     public void redirectLink(
